@@ -415,6 +415,15 @@ em {
   aspect-ratio: 787 / 879;
 }
 
+.about__text {
+  text-align: center;
+}
+
+.about__text p {
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .about__lead {
   font-family: var(--font-display);
   font-weight: 500;
@@ -461,6 +470,15 @@ em {
 
 .collection:nth-child(even) .collection__text {
   order: 2;
+}
+
+.collection__text {
+  text-align: center;
+}
+
+.collection__text p {
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .collection__numeral {
@@ -1026,8 +1044,19 @@ body.lightbox-open {
 
   /* Process */
   .step {
-    grid-template-columns: 48px 1fr;
+    grid-template-columns: 1fr;
     padding: 32px 0;
+    text-align: center;
+  }
+
+  .step__numeral {
+    padding-top: 0;
+    margin-bottom: 12px;
+  }
+
+  .step p {
+    margin-left: auto;
+    margin-right: auto;
   }
 
   /* Instagram */
@@ -1039,6 +1068,26 @@ body.lightbox-open {
   .contact {
     grid-template-columns: 1fr;
     gap: 56px;
+    text-align: center;
+  }
+
+  .contact__text p {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .contact__links {
+    align-items: center;
+  }
+
+  .field input,
+  .field textarea {
+    text-align: center;
+  }
+
+  .form__helper {
+    margin-left: auto;
+    margin-right: auto;
   }
 
   /* Footer */
