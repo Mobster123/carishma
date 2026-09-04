@@ -560,7 +560,11 @@ em {
   max-width: 100%;
   min-height: 400px;
   background: var(--paper-2);
-  box-shadow: var(--shadow-sheet);
+}
+
+.ig-card:has(iframe) {
+  min-height: 0;
+  background: transparent;
 }
 
 .ig-card blockquote {
@@ -569,6 +573,19 @@ em {
 
 .ig-card .instagram-media {
   min-width: 0;
+}
+
+/* Instagram's script sets inline margins, radius and shadow on its iframe;
+   override them so the post reads as a sheet on the paper like everything else. */
+.ig-card iframe {
+  display: block;
+  width: 100% !important;
+  max-width: none !important;
+  min-width: 0 !important;
+  margin: 0 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: var(--shadow-sheet) !important;
 }
 
 .instagram__handle a {
