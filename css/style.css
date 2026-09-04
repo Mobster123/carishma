@@ -845,16 +845,52 @@ body.lightbox-open .enquire-bar {
   display: none;
 }
 
+.lightbox__stage {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  overflow: hidden;
+  -webkit-overflow-scrolling: touch;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
 .lightbox__img {
+  margin: auto;
   max-width: min(90vw, 70vh);
   max-height: 88vh;
   width: auto;
   height: auto;
   box-shadow: var(--shadow-sheet);
+  cursor: zoom-in;
+}
+
+.lightbox.is-zoomed .lightbox__stage {
+  overflow: auto;
+  cursor: grab;
+}
+
+.lightbox.is-zoomed .lightbox__stage.is-dragging {
+  cursor: grabbing;
+}
+
+.lightbox.is-zoomed .lightbox__img {
+  max-width: none;
+  max-height: none;
+  height: auto;
+  margin: auto;
+  padding: 48px 0;
+  box-shadow: none;
+  cursor: zoom-out;
+}
+
+.lightbox.is-zoomed .lightbox__stage.is-dragging .lightbox__img {
+  cursor: grabbing;
 }
 
 .lightbox__btn {
   position: absolute;
+  z-index: 1;
   font-family: var(--font-body);
   font-weight: 400;
   font-size: 11px;
@@ -872,6 +908,11 @@ body.lightbox-open .enquire-bar {
 .lightbox__close {
   top: 20px;
   right: 28px;
+}
+
+.lightbox__zoom {
+  top: 20px;
+  right: 112px;
 }
 
 .lightbox__prev,
@@ -1147,5 +1188,10 @@ body.lightbox-open {
 
   .lightbox__counter {
     bottom: 64px;
+    z-index: 1;
+  }
+
+  .lightbox__zoom {
+    right: 100px;
   }
 }

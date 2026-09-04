@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css?v=4">
+  <link rel="stylesheet" href="css/style.css?v=5">
 </head>
 <body>
 
@@ -255,13 +255,16 @@
   </div>
 
   <div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-label="Catalogue page" hidden>
+    <div class="lightbox__stage">
+      <img class="lightbox__img" alt="" width="1200" height="1553" draggable="false">
+    </div>
+    <button class="lightbox__btn lightbox__zoom" type="button" aria-pressed="false">Zoom</button>
     <button class="lightbox__btn lightbox__close" type="button">Close</button>
     <button class="lightbox__btn lightbox__prev" type="button" aria-label="Previous page">&larr;</button>
-    <img class="lightbox__img" alt="">
     <button class="lightbox__btn lightbox__next" type="button" aria-label="Next page">&rarr;</button>
     <p class="lightbox__counter" aria-live="polite"></p>
   </div>
 
-  <script src="js/main.js?v=4"></script>
+  <script src="js/main.js?v=5"></script>
 </body>
 </html>
