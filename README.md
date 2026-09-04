@@ -18,7 +18,6 @@ No build step. Open `index.html` in a browser or serve the folder with any stati
 
 ## Pending from the owner
 
-- Three Instagram post URLs for the From Instagram section (placeholders are commented out in `index.html`).
 - Confirmation of the wedding order lead time for the closing line of the Process section (currently commented out).
 
 Web development module project, Aryan Chand, roll number 25120223.
